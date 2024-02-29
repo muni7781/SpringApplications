@@ -1,4 +1,4 @@
-package com.ms.test;
+   package com.ms.test;
 
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.FileSystemResource;
@@ -12,9 +12,10 @@ public class TestClientApp
 		FileSystemResource res = new FileSystemResource("src/com/ms/cfgs/ApplicationContext.xml");
 		XmlBeanFactory factory = new XmlBeanFactory(res);
 		Object result=factory.getBean("wmg");
-		WishMessageGenerator generate = (WishMessageGenerator)result;
 		
-		String Messg=generate.WishMessage("Muni");
-		System.out.println(Messg);
+		WishMessageGenerator generate = (WishMessageGenerator)result;
+		 
+	String Messg=generate.WishMessage("Muni");
+	System.out.println(Messg);
 	}
 }
